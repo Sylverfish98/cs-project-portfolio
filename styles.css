@@ -1,27 +1,23 @@
 :root {
-    --primary-color: #131313;
-    --text: #ccc;
-    --text-muted: #636363;
-    --highlight-color-1: #c38810;
-    --highlight-color-2: #5b8fda;
-    --border-light: #333;
-    --border-light-2: #111;
-    --background-1: #131313;
-    --background-2: #1e1e1e;
-}
+       --primary-color: #131313;
+       --text: #ccc;
+       --text-muted: #636363;
+       --highlight-color-1: #c38810;
+       --highlight-color-2: #5b8fda;
+       --border-light: #333;
+       --border-light-2: #111;
+       --background-1: #131313;
+       --background-2: #1e1e1e;
+   }
 
 @font-face {
     font-family: 'Mina';
     src: url('./public/roboto.ttf');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
     font-family: 'American';
     src: url('./public/American-Captain.ttf');
-    font-weight: normal;
-    font-style: normal;
 }
 
 html, body {
@@ -103,6 +99,10 @@ div {
     gap: 0.75rem;
 }
 
+main {
+    width: 100%;
+}
+
 .main-content {
     flex-direction: column;
     position: relative;
@@ -143,6 +143,7 @@ section {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .serv-icon {
@@ -165,12 +166,13 @@ section {
 
 .reviews {
     display: flex;
-    height: 18rem;
+    min-height: 18rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     background-color: var(--background-2);
+    padding: 1rem;
 }
 
 .reviews-container {
@@ -178,6 +180,7 @@ section {
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .review {
@@ -188,6 +191,7 @@ section {
     border-radius: 0.5rem;
     gap: 1rem;
     padding: 0.5rem 1rem;
+    flex: 1 1 15rem;
 }
 
 .profile {
@@ -207,6 +211,7 @@ section {
     position: relative;
     display: flex;
     justify-content: center;
+    padding: 2rem 1rem;
 }
 
 .about-card {
@@ -217,12 +222,14 @@ section {
     border: 1px solid var(--border-light);
     border-radius: 0.25rem;
     padding: 1rem 2rem;
+    max-width: 50rem;
 }
 
 .about-intro {
     width: 100%;
     align-items: center;
     gap: 1rem;
+    flex-direction: row;
 }
 
 .portrait {
@@ -236,10 +243,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
-    height: 6rem;
+    height: auto;
     border-top: 1px solid var(--border-light);
-    display: flex;
     background-color: var(--background-1);
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .footer-logo {
@@ -253,18 +261,14 @@ footer {
 }
 
 .footer-links {
-
     flex-direction: column;
-    gap: 0.25rem
+    gap: 0.25rem;
 }
 
 .footer-links > * {
     font-size: 0.9rem;
     color: var(--text-muted);
 }
-
-
-/*Components*/
 
 .text-highlight {
     color: var(--highlight-color-2);
@@ -273,9 +277,9 @@ footer {
 
 .top-card {
     position: relative;
-    margin:0;
+    margin: 0;
     padding: 0;
-    width: 100%; !important;
+    width: 100%;
     color: white;
 }
 
@@ -284,7 +288,7 @@ footer {
 }
 
 .title {
-    font-family: 'American', sans-serif !important;
+    font-family: 'American', sans-serif;
     font-size: 1.5rem;
     margin: 0;
 }
@@ -301,7 +305,7 @@ button {
 
 .logo {
     width: 2rem;
-    height: 1.5rem
+    height: 1.5rem;
 }
 
 .text-btn {
@@ -327,7 +331,6 @@ button {
 .main-btn:hover {
     color: var(--highlight-color-2);
     border: 1px solid var(--highlight-color-2);
-
 }
 
 .highlight-btn {
@@ -347,3 +350,36 @@ button {
     background-color: var(--highlight-color-2);
 }
 
+@media (max-width: 768px) {
+    .story {
+        flex-direction: column;
+        gap: 2rem;
+        padding-block: 2rem;
+    }
+    .info {
+        font-size: 1.3rem;
+    }
+    .reviews-container {
+        gap: 1rem;
+    }
+    .offer {
+        width: 20rem;
+    }
+    .about-card {
+        align-items: center;
+    }
+    .about-intro {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .footer {
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+    .footer-links {
+        width: 100%;
+        align-items: center;
+    }
+}
