@@ -111,19 +111,56 @@ div {
 }
 
 section {
-    padding-block: 2rem;
+    padding-block: 4rem;
     padding-inline: 0.5rem;
     background-color: #131313;
 }
 
-.services {
+.story {
     display: flex;
     flex-direction: row;
-    gap: 2rem
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    border-block: 1px solid var(--border-light);
+}
+
+.info {
+    text-align: center;
+    font-family: 'American';
+    font-size: 1.5rem;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.services-container {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.serv-icon {
+    width: 3rem;
+    height: 2.5rem;
 }
 
 .offer {
-    background-color: #858585;
+    display: flex;
+    align-items: center;
+    font-family: 'Mina';
+    font-weight: bold;
+    color: var(--highlight-color-1);
+    background-color: var(--background-2);
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
 }
 
 .reviews {
