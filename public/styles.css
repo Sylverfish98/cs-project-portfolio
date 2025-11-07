@@ -12,12 +12,12 @@
 
 @font-face {
     font-family: 'Mina';
-    src: url('./public/roboto.ttf');
+    src: url('./roboto.ttf');
 }
 
 @font-face {
     font-family: 'American';
-    src: url('./public/American-Captain.ttf');
+    src: url('./American-Captain.ttf');
 }
 
 html, body {
@@ -291,6 +291,12 @@ footer {
 .title {
     font-family: 'American', sans-serif;
     font-size: 1.5rem;
+    margin: 0;
+}
+
+.title-call {
+    font-family: 'American', sans-serif;
+    font-size: 2.5rem;
     margin: 0;
 }
 
