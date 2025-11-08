@@ -261,7 +261,6 @@ input {
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
-    border-bottom: 1px solid var(--border-light);
 }
 
 .about-card {
@@ -419,6 +418,24 @@ button {
 .highlight-btn:hover {
     color: white;
     background-color: var(--highlight-color-2);
+}
+
+.mec {
+    width: 4rem;
+    height: 4rem;
+}
+
+.certification {
+    display: flex;
+    border-block: 1px solid var(--background-2);
+    padding: 1.5rem 1rem;
+    justify-content: center;
+}
+
+.cert-card {
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 @media (max-width: 768px) {
