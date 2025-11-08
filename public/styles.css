@@ -13,12 +13,12 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('./roboto.ttf');
+    src: url('./fonts/roboto.ttf');
 }
 
 @font-face {
     font-family: 'American';
-    src: url('./American-Captain.ttf');
+    src: url('./fonts/American-Captain.ttf');
 }
 
 html, body {
